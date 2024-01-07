@@ -59,11 +59,23 @@ body * {
 .cash-qtd {
     font-size: 17px;
     font-weight: 500;
+}
+
+.rs {
+    font-weight: 700;
+}
+
+.rs-cash {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     position: relative;
 }
 
 
-.cash-qtd::after {
+.rs-cash::after {
     content: " ";
     width: 100%;
     height: 2px;
