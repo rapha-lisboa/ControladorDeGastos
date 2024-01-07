@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    /* background-color: rgb(225, 252, 231); */
+    background-color: white;
+    /* background-color: rgb(198, 198, 198); */
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+}
+
+#container {
+    border: 1px solid red;
+    width: 100%;
+    /* min-width: 588px; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+    
+#light-green-area{
+    background-color: rgb(136, 213, 136);
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+#profile {
+    display: flex;
+    flex-direction: row;
+    color: whitesmoke;
+    padding: 10px
+}
+
+#welcome {
+    margin: auto;
+    font-size: 20px;
+}
+
+#dark-green-area {
+    background-color: rgb(66, 106, 66);
+}
+
