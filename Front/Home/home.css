@@ -25,10 +25,9 @@ body * {
 }
     
 #light-green-area{
-    background-color: rgb(136, 213, 136);
+    background-color: rgb(97, 160, 97);
     display: flex;
     flex-direction: column;
-    height: 300px;
 }
 
 #profile {
