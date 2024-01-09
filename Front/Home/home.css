@@ -94,7 +94,6 @@ body * {
 }
 
 #dark-green-area {
-    /* background-color: rgb(66, 106, 66); */
     background-color: rgb(44, 78, 44);
     padding: 20px;
     display: flex;

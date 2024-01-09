@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Home </title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="Modal/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -41,7 +42,7 @@
             </div>
         </div>
         <div id="dark-green-area">
-            <button class="btn-style" id="add"> 
+            <button onclick="openModal(1)" class="btn-style" id="add"> 
                 Adicionar
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
@@ -49,7 +50,7 @@
                 </svg>
             </button>
 
-            <button class="btn-style" id="remove"> 
+            <button onclick="openModal(2)" class="btn-style" id="remove"> 
                 Gastar 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
@@ -57,7 +58,51 @@
                 </svg>
             </button>
         </div>
+
+        <!-- Modal -->
+        <div id="modal-overlay">
+            <div id="modal-outside">
+                <div id="modal-inside">
+                    <p id="text-cash"> </p>
+                    <div class="name-input">
+                        <p class="name"> Descrição </p>
+                        <input type="text" class="input" id="description-input">
+                        
+                        <div class="input-error"></div>
+                    </div>
+                    <div class="name-input">
+                        <p class="name"> Valor </p>
+                        <input type="number" class="input" id="description-input">
+                        <div class="input-error"></div>
+                    </div>
+                    <div id="type-of-payment">
+                        <label class="container">
+                            <input type="radio" checked="checked" name="opcao" value="credit-option">
+                            <span class="checkmark"></span>
+                            Crédito
+                        </label>
+                    
+                        <label class="container">
+                            <input type="radio" name="opcao" value="debit-radio">
+                            <span class="checkmark"></span>
+                            Débito
+                        </label>
+                    </div>
+                    <button onclick="addTransaction()" id="send-payment"> Salvar </button>
+                    <div id="load">
+                        <svg id="check" xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="#457045" class="bi bi-check2" viewBox="0 0 16 16">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                        </svg>
+                        <svg id="x-error" xmlns="http://www.w3.org/2000/svg" width="130" height="130" fill="#b60909" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                        </svg>
+                    </div>
+                    <p id="feedback"></p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="home.js"></script>
+    <script src="Modal/modal.js"></script>
 </body>
 </html>
